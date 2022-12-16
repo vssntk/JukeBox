@@ -21,7 +21,7 @@
 </head>
 <body>
     <div class="row">
-        <div class="side-bar col-sm-3 col-md-3 col-lg-3 d-flex flex-column align-items-center" style="height:100%">
+        <div class="side-bar col-sm-3 col-md-3 col-lg-3 d-flex flex-column align-items-center">
             <div class="logo">
                 <img src="./public/images/logo2.png" alt="Logo">
             </div>
@@ -35,9 +35,19 @@
                         <li><a href="">My Playlist</a></li>
                     </ul>
                 </li>
-                <li id="ranking-board" class="">
-                    <h5 class="p-0 m-1"><i class="fa-solid fa-trophy"></i> Ranking Board</h5>
-                    <a href="" class="m-1">See more ></a>
+                <li id="ranking-board row" class="">
+                    <h5 class="col-sm-12 p-0 m-0"><i class="fa-solid fa-trophy"></i> Ranking Board</h5>
+                    <ul id="rankingList" class="list-unstyled">
+                        <li class="songItem d-flex flex-row">
+                            <h3>1.</h3>
+                            <img src="./public/images/unnamed.png" alt="" style="width:100px; height:100px;">
+                            <div class="row">
+                                <span>Song Name</span>
+                                <p>Singer Name</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="" class="col-sm-12 p-0 m-0">See more ></a>
                 </li>
             </ul>
 
@@ -55,13 +65,13 @@
                     </div>
                 </div>
             </nav>
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleCaptions" class="carousel slide m-5" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner">
+                <div class="carousel-inner" id="imgSlide">
                     <div class="carousel-item active">
                     <img src="./public/images/img1.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
@@ -92,6 +102,22 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+            </div>
+            <h3 style="color: #fff;"><i class="fa-solid fa-music"></i> New Song:</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 p-0" style="width: fit-content; height: fit-content;">
+                        <div class="card d-flex justify-content-center align-items-center" style="width: fit-content;">
+                            <img src="./public/images/unnamed.png" class="card-img-top" alt="..." style="width:100px; height:100px;">
+                            <div class="card-img-overlay d-flex align-items-start justify-content-center" id="imgOverplay">
+                                <a href="#" class="fs-1"><i class="fa-regular fa-circle-play"></i></a>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title fs-5">Name Song </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>  
