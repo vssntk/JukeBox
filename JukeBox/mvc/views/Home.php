@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- CSS -->
@@ -21,7 +22,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="side-bar col-sm-3 col-md-3 d-flex justify-content-center align-items-center flex-column">
+            <div class="side-bar col-sm-3 col-md-3 col-lg-3 d-flex justify-content-center align-items-center flex-column">
                 <div class="logo">
                     <img src="./public/images/logo1.png" alt="Logo">
                     <h4>Music for Free</h4>
@@ -43,7 +44,7 @@
                 </ul>
 
             </div>
-            <div class="content col-sm-9 col-md-9">
+            <div class="content col-sm-9 col-md-9 col-lg-9">
 
             </div>
         </div>
