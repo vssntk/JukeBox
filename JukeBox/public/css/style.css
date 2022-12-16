@@ -4,12 +4,6 @@ html, body{
     margin: 0;
     padding: 0;
 }
-.container{
-    width:100%;
-    height: 100vh;
-    padding:0;
-    margin:0;
-}
 .row{
     width: 100%;
     height: 100%;
@@ -20,45 +14,45 @@ html, body{
     width: fit-content;
 }
 .logo img{
-    width:150px;
+    width:200px;
     height:100px;
 }
 
 .side-bar{
     padding: 0px;
-    background: #DBA39A;
+    background: #50577A;
     height: 100vh;
 }
 
-.content{
-    background: #F0DBDB;
-    width: 100vh;
+.home {
+    background: #000;
 }
 
 .side-menu{
-    color: #333;
+    color: #fff;
     font-size: 20px;
     text-decoration: none;
     width: 100%;
 }
 
 .side-menu a{
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }
 
 .side-menu a:hover{
     color: #fff;
     text-decoration: none;
+    margin: 5px;
 }
 
 .side-menu li{
-    padding: 15px;
+    padding: 10px;
     margin: 5px;
 }
 
 .side-menu .active{
-    background: #F5EBE0;
+    background: #404258;
 }
 
 .sub-list{
@@ -77,4 +71,55 @@ html, body{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#content{
+    background: #6B728E;
+}
+
+#btnCategory{
+    color: #fff;
+    border: 0px;
+}
+
+#btnCategory:hover{
+    background: none;
+    text-decoration: underline;
+}
+
+.user a{
+    color: #fff;
+    text-decoration: none;
+}
+.user a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.search{
+    border-radius: 50px;
+    background-color: #474E68;
+    padding: 15px;
+}
+
+.search input{
+    background-color: #474E68;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+}
+
+#categoryList a{
+    text-decoration: none;
+}
+
+#categoryList a:hover{
+    text-decoration: underline;
+    color: #2146C7;
+}
+
+#categoryList li{
+    margin: 15px;
 }
