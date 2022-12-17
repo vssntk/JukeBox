@@ -61,7 +61,12 @@
                         <input type="text" placeholder="Search Music...">
                     </div>
                     <div class="user">
-                        <a href="Login.php" class="fs-4"><i class="fa-solid fa-circle-user"></i> Login</a>
+                        <a href="/JukeBox/JukeBox/RegisterController">
+                            <button class="btn btn-success">Sign Up</button>
+                        </a>
+                        <a href="/JukeBox/JukeBox/LoginController" class="fs-4">
+                            <button class="btn btn-primary"><i class="fa-solid fa-circle-user"></i> Login</button>
+                        </a>
                     </div>
                 </div>
             </nav>
