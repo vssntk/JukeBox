@@ -84,7 +84,7 @@ function createUser($connect, $username, $email, $password)
     }
 
     // Mã hóa mật khẩu
-    $hashPassword = password_hash($password, PASSWORD_DEFAULT);
+    //$hashPassword = password_hash($password, PASSWORD_DEFAULT);
 
     mysqli_stmt_bind_param($stmt, 'sss', $username, $email, $hashPassword);
     mysqli_stmt_execute($stmt);

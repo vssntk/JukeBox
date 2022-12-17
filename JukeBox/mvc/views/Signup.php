@@ -36,8 +36,8 @@
 
 <body>
 
-    <form action="./validating/validate-signup.php" method="post" class="mt-5 shadow-lg p-3 mb-5 bg-body rounded">
-        <h1>Register</h1>
+    <form action="./login-signup-validating/validate-signup.php" method="post" class="mt-5 shadow-lg p-3 mb-5 bg-body rounded">
+        <h1>Signup</h1>
         <div class="mb-3 mt-3">
             <label class="form-label">Username</label>
             <input type="text" class="form-control" id="username" name="username" value="" />
