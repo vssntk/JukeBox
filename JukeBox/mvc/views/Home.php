@@ -38,13 +38,18 @@
                 <li id="ranking-board row" class="">
                     <h5 class="col-sm-12 p-0 m-0"><i class="fa-solid fa-trophy"></i> Ranking Board</h5>
                     <ul id="rankingList" class="list-unstyled">
-                        <li class="songItem d-flex flex-row">
-                            <h3>1.</h3>
-                            <img src="./public/images/unnamed.png" alt="" style="width:100px; height:100px;">
-                            <div class="row">
-                                <span>Song Name</span>
-                                <p>Singer Name</p>
-                            </div>
+                        <li class="songItem d-flex flex-row align-items-center" style="width: fit-content;">
+                            <span>01</span>
+                            <img src="./public/images/unnamed.png" alt="Alan" style="width:50px; height:50px;">
+                            <a href="#" class="p-0 m-0">
+                                <h5 class="fs-5">
+                                    On My Way
+                                    <div class="subtitle fs-6">Alan Walker</div>
+                                </h5>
+                            </a>
+                            <a href="" class="fs-4">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </a>
                         </li>
                     </ul>
                     <a href="" class="col-sm-12 p-0 m-0">See more ></a>
@@ -104,19 +109,13 @@
                 </button>
             </div>
             <h3 style="color: #fff;"><i class="fa-solid fa-music"></i> New Song:</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 p-0" style="width: fit-content; height: fit-content;">
-                        <div class="card d-flex justify-content-center align-items-center" style="width: fit-content;">
-                            <img src="./public/images/unnamed.png" class="card-img-top" alt="..." style="width:100px; height:100px;">
-                            <div class="card-img-overlay d-flex align-items-start justify-content-center" id="imgOverplay">
-                                <a href="#" class="fs-1"><i class="fa-regular fa-circle-play"></i></a>
-                            </div>
-                            <div class="card-body">
-                                <h6 class="card-title fs-5">Name Song </h6>
-                            </div>
-                        </div>
-                    </div>
+            <div class="card d-flex justify-content-center align-items-center" style="width: fit-content;">
+                <img src="./public/images/unnamed.png" class="card-img-top" alt="..." style="width:100px; height:100px;">
+                <div class="card-img-overlay d-flex align-items-start justify-content-center" id="imgOverplay">
+                    <a href="#" class="fs-1"><i class="fa-regular fa-circle-play"></i></a>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title fs-5">Name Song </h6>
                 </div>
             </div>
         </div>
