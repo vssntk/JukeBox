@@ -1,10 +1,10 @@
 <?php
-class SignupController extends Controller 
+class SignupController extends Controller
 {
     public function Main()
     {
-         // GỌI Model
-         $account_model = $this->model("AccountModel");
+        // GỌI Model
+        $account_model = $this->model("AccountModel");
 
         // GỌI View
         $this->view("Signup");
@@ -12,23 +12,22 @@ class SignupController extends Controller
 
     public function ValidateSignup()
     {
-        if (isset($_POST['submit'])) 
-        {
+        if (isset($_POST['submit'])) {
             $username = $_POST['username'];
             $email = $_POST['email'];
             $password = $_POST['password'];
             $confirmPassword = $_POST['confirm-password'];
-        
-            // require_once('connection.php');
+
+            // require_once('./core/login-signup-validating/connection.php');
             // require_once('validate-signup-functions.php');
-        
+
             // Kiểm tra input bị trống
             if ($this->emptyInputSignup($username, $email, $password, $confirmPassword) !== false) {
                 $this->view("Signup", [
-                "error" => "Không được để trống thông tin"
+                    "error" => "Không được để trống thông tin"
                 ]);
                 exit();
-            } 
+            }
             // Kiểm tra username hợp lệ
             if ($this->invalidUsername($username) !== false) {
                 $this->view("Signup", [
@@ -57,10 +56,9 @@ class SignupController extends Controller
                 ]);
                 exit();
             }
-        
+
             // Thực hiện insert vào DB 
             $account_model->createUser($connect, $username, $email, $password);
-        
         }
     }
 
@@ -74,34 +72,34 @@ class SignupController extends Controller
         }
         return $result;
     }
-    
+
     private function invalidUsername($username)
     {
         $result = null;
-    
+
         // Check username hợp lệ bằng RegEx
-        if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) { 
+        if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
             $result = true;
         } else {
             $result = false;
         }
         return $result;
     }
-    
+
     private function invalidEmail($email)
     {
         $result = null;
-    
+
         // Built-in function that check the email is invalid or not
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $result = true;
         } else {
             $result = false;
         }
-    
+
         return $result;
     }
-    
+
     private function passwordMatch($password, $confirmPassword)
     {
         $result = null;
@@ -110,8 +108,7 @@ class SignupController extends Controller
         } else {
             $result = false;
         }
-    
+
         return $result;
     }
 }
-?>
