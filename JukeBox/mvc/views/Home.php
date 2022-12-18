@@ -66,7 +66,7 @@
                         <input type="text" placeholder="Search Music...">
                     </div>
                     <div class="user">
-                        <a href="/JukeBox/JukeBox/RegisterController">
+                        <a href="/JukeBox/JukeBox/SignupController">
                             <button class="btn btn-success">Sign Up</button>
                         </a>
                         <a href="/JukeBox/JukeBox/LoginController" class="fs-4">

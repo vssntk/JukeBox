@@ -2,15 +2,15 @@
 class Database
 {
 
-    public $con;
+    public $connect;
     protected $host = 'localhost';
-    protected $dbName = ''; //database name
+    protected $dbName = 'jukeboxmusic'; 
     protected $username = 'root';
     protected $password = '';
 
     function __construct(){
-        $this->con = new PDO("mysql:host=$this->host;dbname=$this->dbName", $this->username, $this->password);
-        $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->connect = new PDO("mysql:host=$this->host;dbname=$this->dbName", $this->username, $this->password);
+        $this->connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
 }

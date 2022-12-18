@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $confirmPassword = $_POST['confirm-password'];
 
     require_once('connection.php');
-    require_once('functions.php');
+    require_once('validate-signup-functions.php');
 
     // Kiểm tra input bị trống
     if (emptyInputSignup($username, $email, $password, $confirmPassword) !== false) {
@@ -40,6 +40,6 @@ if (isset($_POST['submit'])) {
 
 } 
 else {
-    header("location: ../signup.php");
+    header("location: ../JukeBox/JukeBox/SignupController");
     exit();
 }

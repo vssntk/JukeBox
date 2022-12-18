@@ -35,8 +35,7 @@
 </head>
 
 <body>
-
-    <form action="./login-signup-validating/validate-signup.php" method="post" class="mt-5 shadow-lg p-3 mb-5 bg-body rounded">
+    <form action="/JukeBox/JukeBox/SignupController/ValidateSignup" method="post" class="mt-5 shadow-lg p-3 mb-5 bg-body rounded">
         <h1>Signup</h1>
         <div class="mb-3 mt-3">
             <label class="form-label">Username</label>
@@ -56,7 +55,33 @@
         </div>
         <button type="submit" class="btn btn-primary" name="submit">Register</button>
     </form>
-    
+
+    <script>
+        $('#message-modal').modal(
+            {show: true}
+        );
+    </script>
+
 </body>
+
+<!-- Message Modal -->
+    <div class="modal fade" id="message-modal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Thông báo</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="message-content">Lỗi</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+
+        </div>
+    </div><!-- Message modal -->  
 
 </html>
