@@ -21,7 +21,7 @@ html, body{
 .side-bar{
     padding: 0px;
     background: #50577A;
-    height: 100vh;
+    width: 20%;
 }
 
 .side-menu{
@@ -71,6 +71,7 @@ html, body{
 
 #content{
     background: #6B728E;
+    width: 80%;
 }
 
 #btnCategory{

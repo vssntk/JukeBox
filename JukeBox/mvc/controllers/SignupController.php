@@ -1,10 +1,10 @@
 <?php
-class SignupController extends Controller 
+class SignupController extends Controller
 {
     public function Main()
     {
-         // GỌI Model
-         $account_model = $this->model("AccountModel");
+        // GỌI Model
+        $account_model = $this->model("AccountModel");
 
         // GỌI View
         $this->view("Signup");
@@ -12,8 +12,7 @@ class SignupController extends Controller
 
     public function ValidateSignup()
     {
-        if (isset($_POST['submit'])) 
-        {
+        if (isset($_POST['submit'])) {
             $username = $_POST['username'];
             $email = $_POST['email'];
             $password = $_POST['password'];
@@ -22,10 +21,10 @@ class SignupController extends Controller
             // Kiểm tra input bị trống
             if ($this->emptyInputSignup($username, $email, $password, $confirmPassword) != false) {
                 $this->view("Signup", [
-                "error" => "Không được để trống thông tin"
+                    "error" => "Không được để trống thông tin"
                 ]);
                 exit();
-            } 
+            }
             // Kiểm tra username hợp lệ
             if ($this->invalidUsername($username) != false) {
                 $this->view("Signup", [
@@ -54,10 +53,9 @@ class SignupController extends Controller
                 ]);
                 exit();
             }
-        
+
             // Thực hiện insert vào DB 
             $account_model->createUser($connect, $username, $email, $password);
-        
         }
     }
 
@@ -69,35 +67,51 @@ class SignupController extends Controller
         }
         return $result;
     }
-    
+
     private function invalidUsername($username)
     {
+<<<<<<< HEAD
         $result = false;
+=======
+        $result = null;
+
+>>>>>>> 464973213416dca31c769ec1ded632c3c337080b
         // Check username hợp lệ bằng RegEx
-        if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) { 
+        if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
             $result = true;
         }
         return $result;
     }
-    
+
     private function invalidEmail($email)
     {
+<<<<<<< HEAD
         $result = false;
+=======
+        $result = null;
+
+>>>>>>> 464973213416dca31c769ec1ded632c3c337080b
         // Built-in function that check the email is invalid or not
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $result = true;
         }
-    
+
         return $result;
     }
-    
+
     private function passwordMatch($password, $confirmPassword)
     {
         $result = false;
         if ($password != $confirmPassword) {
             $result = true;
+<<<<<<< HEAD
         } 
+=======
+        } else {
+            $result = false;
+        }
+
+>>>>>>> 464973213416dca31c769ec1ded632c3c337080b
         return $result;
     }
 }
-?>

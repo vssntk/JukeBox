@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap 5 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <!-- Jquery -->
@@ -19,6 +17,7 @@
     <script src="https://kit.fontawesome.com/972cc7adb8.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div class="row">
         <div class="side-bar col-sm-3 col-md-3 col-lg-3 d-flex flex-column align-items-center" style="height: 100vh">
@@ -37,7 +36,7 @@
                 </li>
                 <li id="ranking-board row" class="">
                     <h5 class="col-sm-12 p-0 m-0"><i class="fa-solid fa-trophy"></i> Ranking Board</h5>
-                    <ul id="rankingList" class="list-unstyled">
+                    <ul id="rankingList" class="list-unstyled" style="color: #000;">
                         <li class="songItem d-flex flex-row align-items-center" style="width: fit-content;">
                             <span>01</span>
                             <img src="./public/images/unnamed.png" alt="Alan" style="width:50px; height:50px;">
@@ -83,25 +82,13 @@
                 </div>
                 <div class="carousel-inner" id="imgSlide">
                     <div class="carousel-item active">
-                    <img src="./public/images/img1.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
+                        <img src="./public/images/BadLiar.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="./public/images/img2.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
+                        <img src="./public/images/Bones.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="./public/images/img3.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
+                        <img src="./public/images/CountingStars.jpg" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -124,28 +111,29 @@
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Category</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="fs-4 list-unstyled d-flex flex-row" id="categoryList">
+                        <li><a href="">US-UK</a></li>
+                        <li><a href="">Vpop</a></li>
+                        <li><a href="">Kpop</a></li>
+                        <li><a href="">Cpop</a></li>
+                        <li><a href="">Jpop</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <ul class="fs-4 list-unstyled d-flex flex-row" id="categoryList">
-                <li><a href="">US-UK</a></li>
-                <li><a href="">Vpop</a></li>
-                <li><a href="">Kpop</a></li>
-                <li><a href="">Cpop</a></li>
-                <li><a href="">Jpop</a></li>
-            </ul>
-        </div>
-        <div class="modal-footer">
-        </div>
-        </div>
-    </div>
     </div>
 </body>
+
 </html>
