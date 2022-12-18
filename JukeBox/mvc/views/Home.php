@@ -37,7 +37,7 @@
                 </li>
                 <li id="ranking-board row" class="">
                     <h5 class="col-sm-12 p-0 m-0"><i class="fa-solid fa-trophy"></i> Ranking Board</h5>
-                    <ul id="rankingList" class="list-unstyled">
+                    <ul id="rankingList" class="list-unstyled" style="color: #000;">
                         <li class="songItem d-flex flex-row align-items-center" style="width: fit-content;">
                             <span>01</span>
                             <img src="./public/images/unnamed.png" alt="Alan" style="width:50px; height:50px;">
