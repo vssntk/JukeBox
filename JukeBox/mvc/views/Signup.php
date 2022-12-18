@@ -64,18 +64,27 @@
         </div>
         <button id="register" type="submit" class="btn btn-primary" name="submit">Register</button>
     </form>
+    <button style="display: none" id="signup" class="btn btn-primary" onclick="showModal()">Test</button>
     <script>
-        let error = "<?php echo $data["error"];?>"
-        if(!empty(error))
+        let error = "<?php if(isset($data["error"]))
         {
-            $("#error-message").html(error);
-            $('#message-modal').modal({show: true});
-            $("#show-error-btn").trigger( "click" );
+            echo $data["error"];
+        }
+        else
+        {
+            echo "";
+        }
+        ?>";
+
+        if(error !== "")
+        {
+            showModal();
         }
 
         function showModal()
         {
-            $('#message-modal').modal({show: true});
+            $("#error-message").text();
+            console.log(error);
         }
     </script>
 
@@ -87,7 +96,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Thông báo</h4>
+                    <h4 class="modal-title">Lỗi</h4>
                 </div>
                 <div class="modal-body">
                     <p id="error-message">Lỗi</p>
@@ -96,7 +105,6 @@
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
                 </div>
             </div>
-
         </div>
     </div>
     <!-- Message modal -->  

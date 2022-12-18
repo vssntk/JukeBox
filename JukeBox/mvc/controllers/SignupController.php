@@ -19,39 +19,36 @@ class SignupController extends Controller
             $password = $_POST['password'];
             $confirmPassword = $_POST['confirm-password'];
         
-            // require_once('connection.php');
-            // require_once('validate-signup-functions.php');
-        
             // Kiểm tra input bị trống
-            if ($this->emptyInputSignup($username, $email, $password, $confirmPassword) !== false) {
+            if ($this->emptyInputSignup($username, $email, $password, $confirmPassword) != false) {
                 $this->view("Signup", [
                 "error" => "Không được để trống thông tin"
                 ]);
                 exit();
             } 
             // Kiểm tra username hợp lệ
-            if ($this->invalidUsername($username) !== false) {
+            if ($this->invalidUsername($username) != false) {
                 $this->view("Signup", [
                     "error" => "Tên đăng nhập không hợp lệ"
                 ]);
                 exit();
             }
             // Kiểm tra email hợp lệ
-            if ($this->invalidEmail($email) !== false) {
+            if ($this->invalidEmail($email) != false) {
                 $this->view("Signup", [
                     "error" => "Email không hợp lệ"
                 ]);
                 exit();
             }
             // Kiểm tra password và confirmpassword giống nhau
-            if ($this->passwordMatch($password, $confirmPassword) !== false) {
+            if ($this->passwordMatch($password, $confirmPassword) != false) {
                 $this->view("Signup", [
                     "error" => "Mật khẩu và nhập lại mật khẩu không giống nhau"
                 ]);
                 exit();
             }
             // Kiểm tra username và email đã tồn tại trong DB
-            if ($account_model->usernameExist($connect, $username, $email) !== false) {
+            if ($account_model->usernameExist($connect, $username, $email) != false) {
                 $this->view("Signup", [
                     "error" => "Tên đăng nhập hoặc email đã có người sử dụng"
                 ]);
@@ -66,37 +63,29 @@ class SignupController extends Controller
 
     private function emptyInputSignup($username, $email, $password, $confirmPassword)
     {
-        $result = null;
+        $result = false;
         if (empty($username) || empty($email) || empty($password) || empty($confirmPassword)) {
             $result = true;
-        } else {
-            $result = false;
         }
         return $result;
     }
     
     private function invalidUsername($username)
     {
-        $result = null;
-    
+        $result = false;
         // Check username hợp lệ bằng RegEx
         if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) { 
             $result = true;
-        } else {
-            $result = false;
         }
         return $result;
     }
     
     private function invalidEmail($email)
     {
-        $result = null;
-    
+        $result = false;
         // Built-in function that check the email is invalid or not
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $result = true;
-        } else {
-            $result = false;
         }
     
         return $result;
@@ -104,13 +93,10 @@ class SignupController extends Controller
     
     private function passwordMatch($password, $confirmPassword)
     {
-        $result = null;
-        if ($password !== $confirmPassword) {
+        $result = false;
+        if ($password != $confirmPassword) {
             $result = true;
-        } else {
-            $result = false;
-        }
-    
+        } 
         return $result;
     }
 }

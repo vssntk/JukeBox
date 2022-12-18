@@ -2,7 +2,6 @@
 
 create table `users`
 (
-	`userid` int(11) NOT NULL,
     `username` varchar(100) not null,
 	`password` varchar(50) not null,
     `email` varchar(100) not null
@@ -20,10 +19,7 @@ create table `musiclist`
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`userid`);
-
-ALTER TABLE `users`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  ADD PRIMARY KEY (`username`);
 
 ALTER TABLE `musiclist`
   ADD PRIMARY KEY (`songid`);
@@ -31,11 +27,11 @@ ALTER TABLE `musiclist`
 ALTER TABLE `musiclist`
   MODIFY `songid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
-INSERT INTO `users` (`userid`, `username`, `password`, `email`) VALUES 
-(1, 'admin1', 'admin1', 'admin1@gmail.com'),
-(2, 'admin2', 'admin2', 'admin2@gmail.com'),
-(3, 'admin3', 'admin3', 'admin3@gmail.com'),
-(4, 'admin4', 'admin4', 'admin4@gmail.com');
+INSERT INTO `users` (`username`, `password`, `email`) VALUES 
+('admin1', 'admin1', 'admin1@gmail.com'),
+('admin2', 'admin2', 'admin2@gmail.com'),
+('admin3', 'admin3', 'admin3@gmail.com'),
+('admin4', 'admin4', 'admin4@gmail.com');
 
 INSERT INTO `musiclist` (`songid`, `songname`, `singer`, `rate`, `imgpath`, `mp3path`) VALUES 
 (1, N'Bad Liar', N'Imagine Dragons', 5, 'images/BadLiar.jpg', 'music-list/BadLiar.mp3'),

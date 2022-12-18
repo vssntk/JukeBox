@@ -21,7 +21,7 @@
 </head>
 <body>
     <div class="row">
-        <div class="side-bar col-sm-3 col-md-3 col-lg-3 d-flex flex-column align-items-center">
+        <div class="side-bar col-sm-3 col-md-3 col-lg-3 d-flex flex-column align-items-center" style="height: 100vh">
             <div class="logo">
                 <img src="./public/images/logo2.png" alt="Logo">
             </div>
