@@ -109,7 +109,9 @@
         </div>
         <div class="register">
             <h1 class="title">Do not have account?</h1>
-            <button class="sign-up-btn"><a href="signup.php">Sign Up</a></button>
+            <a href="/JukeBox/JukeBox/SignupController/Main">
+                <button class="sign-up-btn">Sign Up</button>
+            </a>
         </div>
     </div>
 

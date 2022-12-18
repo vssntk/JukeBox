@@ -1,5 +1,5 @@
 <?php
-class RegisterController extends Controller 
+class SignupController extends Controller 
 {
     public function Main()
     {
@@ -7,7 +7,7 @@ class RegisterController extends Controller
         
 
         // GỌI View
-        $this->view("Register");
+        $this->view("Signup");
     }
 }
 
