@@ -24,37 +24,43 @@ class SignupController extends Controller
         
             // Kiểm tra input bị trống
             if ($this->emptyInputSignup($username, $email, $password, $confirmPassword) !== false) {
-                header('location: ../signup.php?error=emptyinput');
+                $this->view("Signup", [
+                "error" => "Không được để trống thông tin"
+                ]);
                 exit();
             } 
             // Kiểm tra username hợp lệ
             if ($this->invalidUsername($username) !== false) {
-                header('location: ../signup.php?error=invalidusername');
+                $this->view("Signup", [
+                    "error" => "Tên đăng nhập không hợp lệ"
+                ]);
                 exit();
             }
             // Kiểm tra email hợp lệ
             if ($this->invalidEmail($email) !== false) {
-                header('location: signup.php?error=invalidemail');
+                $this->view("Signup", [
+                    "error" => "Email không hợp lệ"
+                ]);
                 exit();
             }
             // Kiểm tra password và confirmpassword giống nhau
             if ($this->passwordMatch($password, $confirmPassword) !== false) {
-                header('location: ../signup.php?error=passworddontmatch');
+                $this->view("Signup", [
+                    "error" => "Mật khẩu và nhập lại mật khẩu không giống nhau"
+                ]);
                 exit();
             }
             // Kiểm tra username và email đã tồn tại trong DB
             if ($account_model->usernameExist($connect, $username, $email) !== false) {
-                header('location: ../signup.php?error=username_and_email_taken');
+                $this->view("Signup", [
+                    "error" => "Tên đăng nhập hoặc email đã có người sử dụng"
+                ]);
                 exit();
             }
         
             // Thực hiện insert vào DB 
             $account_model->createUser($connect, $username, $email, $password);
         
-        } 
-        else {
-            header("location: ../JukeBox/JukeBox/SignupController");
-            exit();
         }
     }
 
