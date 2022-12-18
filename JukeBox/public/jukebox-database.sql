@@ -36,7 +36,7 @@ INSERT INTO `users` (`userid`, `username`, `password`, `email`) VALUES
 (2, 'admin2', 'admin2', 'admin2@gmail.com'),
 (3, 'admin3', 'admin3', 'admin3@gmail.com'),
 (4, 'admin4', 'admin4', 'admin4@gmail.com'),
-(5, 'admin', '123456', 'admin@gmail.com;
+(5, 'admin', '123456', 'admin@gmail.com');
 
 INSERT INTO `musiclist` (`songid`, `songname`, `singer`, `rate`, `imgpath`, `mp3path`) VALUES 
 (1, N'Bad Liar', N'Imagine Dragons', 5, 'images/BadLiar.jpg', 'music-list/BadLiar.mp3'),
